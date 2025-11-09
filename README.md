@@ -43,39 +43,40 @@ As an **Analytics Engineer**, my objective was to:
 ---
 
 ## ⚙️ Project Structure  
+## 📁 Project Structure
+
+```bash
 ├── .github/
-│ └── workflows/
-│ ├── ci.yml
+│   └── workflows/
+│       └── ci.yml                # GitHub Actions CI pipeline
 │
-├── .vscode/
-│ └── settings.json
 │
-├── data/ # (ignored in .gitignore)
-│ ├── benin_clean.csv
-│ ├── togo_clean.csv
-│ ├── sierraleone_clean.csv
+├── data/                         # (ignored in .gitignore)
+│   ├── benin_clean.csv
+│   ├── togo_clean.csv
+│   └── sierraleone_clean.csv
 │
 ├── notebooks/
-│ ├── benin_eda.ipynb
-│ ├── togo_eda.ipynb
-│ ├── sierraleone_eda.ipynb
-│ └── compare_countries.ipynb (upcoming)
+│   ├── benin_eda.ipynb           # EDA notebook for Benin
+│   ├── togo_eda.ipynb            # EDA notebook for Togo
+│   ├── sierraleone_eda.ipynb     # EDA notebook for Sierra Leone
+│   └── compare_countries.ipynb   # (upcoming) Cross-country analysis
 │
 ├── scripts/
-│ ├── init.py
-│ └── README.md
+│   ├── __init__.py
+│   └── README.md                 # Documentation for helper scripts
 │
 ├── tests/
-│ ├── init.py
+│   └── __init__.py               # Unit tests placeholder
 │
-├── app/ # (for optional Streamlit dashboard)
-│ ├── main.py
-│ ├── utils.py
+├── app/                          # (for optional Streamlit dashboard)
+│   ├── main.py                   # Streamlit main app
+│   └── utils.py                  # Utility functions for data/visuals
 │
-├── requirements.txt
-├── .gitignore
-├── README.md
-└── LICENSE
+├── requirements.txt              # Python dependencies
+├── .gitignore                    # Ignored files & folders
+├── README.md                     # Project documentation
+└── LICENSE                       # License file
 
 
 ---
