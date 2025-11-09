@@ -42,7 +42,6 @@ As an **Analytics Engineer**, my objective was to:
 
 ---
 
-## ⚙️ Project Structure  
 ## 📁 Project Structure
 
 ```bash
