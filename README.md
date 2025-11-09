@@ -197,7 +197,7 @@ Planned next:
 
 ```bash
 # 1️⃣ Clone repository
-git clone https://github.com/<your-username>/solar-challenge-week1.git
+git clone https://github.com/abelfx/solar-challenge-week0
 cd solar-challenge-week1
 
 # 2️⃣ Create and activate virtual environment
