@@ -1,9 +1,12 @@
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 
+# --- Load and cache data ---
+import streamlit as st
+
+@st.cache_data
 def load_data(uploaded_files):
-    """Load multiple uploaded CSVs into a dictionary of DataFrames."""
+    """Load multiple uploaded CSVs into a dictionary of DataFrames (cached)."""
     data = {}
     for uploaded_file in uploaded_files:
         name = uploaded_file.name.replace("_clean.csv", "").replace(".csv", "").capitalize()
@@ -12,7 +15,8 @@ def load_data(uploaded_files):
         data[name] = df
     return data
 
-
+# --- Summary stats ---
+@st.cache_data
 def get_summary_stats(data_dict, metrics=["GHI", "DNI", "DHI"]):
     """Return summary statistics (mean, median, std) for given metrics."""
     summary = []
@@ -26,10 +30,12 @@ def get_summary_stats(data_dict, metrics=["GHI", "DNI", "DHI"]):
         summary.append(stats)
     return pd.DataFrame(summary)
 
-
-def plot_boxplots(data_dict, metric="GHI"):
-    """Create a boxplot comparing a metric across countries."""
+# --- Boxplot ---
+def plot_boxplots(data_dict, metric="GHI", sample_size=5000):
+    """Create a boxplot comparing a metric across countries with optional downsampling."""
     combined = pd.concat(data_dict.values(), ignore_index=True)
+    if len(combined) > sample_size:
+        combined = combined.sample(sample_size, random_state=42)
     fig = px.box(
         combined,
         x="Country",
@@ -41,7 +47,7 @@ def plot_boxplots(data_dict, metric="GHI"):
     fig.update_layout(template="plotly_white", height=500)
     return fig
 
-
+# --- Average bar chart ---
 def plot_avg_bar(data_dict, metric="GHI"):
     """Bar chart showing average metric per country."""
     summary = get_summary_stats(data_dict, [metric])
@@ -56,7 +62,7 @@ def plot_avg_bar(data_dict, metric="GHI"):
     fig.update_layout(template="plotly_white", height=400)
     return fig
 
-
+# --- Correlation heatmap ---
 def generate_heatmap(df, country_name):
     """Generate a correlation heatmap for main solar metrics."""
     metrics = ["GHI", "DNI", "DHI", "TModA", "TModB"]
