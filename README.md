@@ -1,6 +1,6 @@
 # ☀️ Solar Data Discovery — Week 1 Challenge  
 ### Kickstart Your AI Mastery with Cross-Country Solar Farm Analysis  
-
+## Dashboard Link: https://solar-discovery.streamlit.app/
 ---
 
 ## 🌍 Overview  
