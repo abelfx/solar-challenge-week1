@@ -69,7 +69,8 @@ As an **Analytics Engineer**, my objective was to:
 │   └── __init__.py               # Unit tests placeholder
 │
 ├── app/                          # Streamlit dashboard
-│   ├── main.py                   # Streamlit main app
+│   ├── __init__.py
+│   └── main.py                 # Streamlit main app
 │   └── utils.py                  # Utility functions for data/visuals
 │
 ├── requirements.txt              # Python dependencies
@@ -161,8 +162,7 @@ Each country had a dedicated notebook:
 
 ---
 
-## 🚧 Task 3 (In Progress): Cross-Country Comparison  
-Planned next:
+## 🚧 Task 3: Cross-Country Comparison  
 - Combine cleaned datasets (`data/*.csv`)  
 - Compare GHI, DNI, DHI distributions  
 - Conduct **ANOVA** for statistical significance  
