@@ -59,7 +59,7 @@ As an **Analytics Engineer**, my objective was to:
 │   ├── benin_eda.ipynb           # EDA notebook for Benin
 │   ├── togo_eda.ipynb            # EDA notebook for Togo
 │   ├── sierraleone_eda.ipynb     # EDA notebook for Sierra Leone
-│   └── compare_countries.ipynb   # (upcoming) Cross-country analysis
+│   └── compare_countries.ipynb   # Cross-country analysis
 │
 ├── scripts/
 │   ├── __init__.py
@@ -68,14 +68,13 @@ As an **Analytics Engineer**, my objective was to:
 ├── tests/
 │   └── __init__.py               # Unit tests placeholder
 │
-├── app/                          # (for optional Streamlit dashboard)
+├── app/                          # Streamlit dashboard
 │   ├── main.py                   # Streamlit main app
 │   └── utils.py                  # Utility functions for data/visuals
 │
 ├── requirements.txt              # Python dependencies
 ├── .gitignore                    # Ignored files & folders
 ├── README.md                     # Project documentation
-└── LICENSE                       # License file
 ```
 
 ## 🧠 Task Summary  
