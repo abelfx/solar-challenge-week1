@@ -1,0 +1,25 @@
+# Core Python data libraries
+pandas==2.2.2
+numpy==1.26.4
+
+# Visualization libraries
+matplotlib==3.9.2
+seaborn==0.13.2
+plotly==5.24.1
+
+# Statistical analysis
+scipy==1.13.1
+
+# Streamlit dashboard (bonus / optional)
+streamlit==1.39.0
+
+# Jupyter & notebooks
+notebook==7.2.2
+ipykernel==6.29.5
+
+# Quality assurance & linting (optional but good practice)
+black==24.8.0
+flake8==7.1.1
+
+# GitHub Actions / CI testing
+pytest==8.3.2
